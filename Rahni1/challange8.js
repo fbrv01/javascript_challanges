@@ -20,3 +20,17 @@ function* fibs (limit)
 }
 
 console.log(Array.from(fibs(10000)))
+
+// I really like Rahni1's solution:
+
+// Each num is a sum of the two preceeding numbers
+function fib(n) {
+
+    const result = [0, 1];
+    for (let i = 2; i < n; i++) {
+      result.push(result[i-2] + result[i-1]);
+    }
+    console.log(result) 
+  
+  }
+  fib(8)
